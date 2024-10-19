@@ -188,14 +188,22 @@ footer p {
 @media only screen and (max-width: 648px) {
 	header img { float: none; }
 	header { text-align: center; }
+
+	/* Change main to a column layout */
+	main {
+		flex-direction: column; /* Stack items vertically */
+	}
+
 	section {
-		flex-basis: 95%; /* Adjust for smaller screens */
-		order: 2; /* Maintain order */
+		flex-basis: 100%; /* Full width for section */
+		order: 1; /* Ensure section appears first */
 	}
+
 	aside {
-		flex-basis: 95%; /* Adjust for smaller screens */
-		order: 1; /* Maintain order */
+		flex-basis: 100%; /* Full width for aside */
+		order: 2; /* Ensure aside appears second */
 	}
+
 	article img { max-width: 30%; }
 	#speakers {
 		column-count: 2;
